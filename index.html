@@ -332,7 +332,22 @@
         </li>
       </ul>
     </div>
+    <div class="subscribe-box">
+      <h3 class="subscribe-text">Subscribe</h3>
+      <form class="subscribe-form" action="">
+        <label>
+          <input class="subscribe-input" type="email" name="email" placeholder="E-mail" required />
+        </label>
+        <button type="submit" class="subscribe-btn">
+          Subscribe
+          <svg class="icon">
+            <use href="./images/icons.svg#icon-telegram"></use>
+          </svg>
+        </button>
+      </form>
     </div>
+    </div>
+    
   </footer>
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
@@ -341,7 +356,6 @@
       <svg class="close-button-icon">
       <use href="./images/icons.svg#icon-close-svg"></use>
     </svg></button>
-    
     <div class="modal-feedback">
       <span class="modal-title">
         Leave your contacts and we will call you back
@@ -351,7 +365,7 @@
           <label class="modal-label" for="name">Name</label>
           <input class="modal-input" type="text" id="name" name="Name" required />
           <svg class="modal-icon">
-            <use href="./images/svg/icons.svg#icon-person-username"></use>
+            <use href="./images/icons.svg#icon-username"></use>
           </svg>
         </div>
         <div class="modal-field">
@@ -359,18 +373,18 @@
           <input class="modal-input" type="tel" id="phone" name="Phone" required
             pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="xxx-xxx-xx-xx" />
           <svg class="modal-icon">
-            <use href="./images/svg/icons.svg#icon-phone"></use>
+            <use href="./images/icons.svg#icon-phone"></use>
           </svg>
         </div>
         <div class="modal-field">
           <label class="modal-label" for="email">Email</label>
           <input class="modal-input" type="email" id="email" name="Email" required />
           <svg class="modal-icon">
-            <use href="./images/svg/icons.svg#icon-email"></use>
+            <use href="./images/icons.svg#icon-email"></use>
           </svg>
         </div>
         <div class="modal-form-comment">
-          <label class="modal-label" for="comment">Comment</label>
+          <label class="modal-label-comment" for="comment">Comment</label>
           <textarea class="modal-comment" name="Comment" id="comment" placeholder="Text input"></textarea>
         </div>
         <div class="modal-form">
@@ -378,8 +392,8 @@
           <label for="user-policy" class="modal-form-check">I accept the terms and conditions of the
             <a class="modal-policy" href="">Privacy Policy</a></label>
         </div>
-        <button type="submit" class="modal-btn-submit">Send</button>
-    </form>
+        <button type="submit" class="modal-submit">Send</button>
+      </form>
     </div>
     </div>
 
