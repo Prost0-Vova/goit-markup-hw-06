@@ -1,9 +1,10 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
-  background-color: var(--bgc-white-color);
-  color: var(--paragraph-text-color);
+  
+  background-color: var(--text-white-color);
+  color: var(--text-color);
+  
   letter-spacing: 0.02em;
 }
 
@@ -23,6 +24,18 @@ ul {
 }
 img {
   display: block;
+}
+.visually-hidden{
+      position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .container {
@@ -65,7 +78,7 @@ img {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 1;
   color: var(--text-color);
   text-decoration: none;
   padding-top: 24px;
@@ -150,7 +163,7 @@ img {
   padding-bottom: 24px;
   color: var(--text-color);
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.2;
   text-decoration: none;
   transition-duration: 250ms;
   transition-property: color;
@@ -733,8 +746,10 @@ img {
   overflow: auto;
   width: 100%;
   height: 100%;
+  padding: 72px 24px 24px 24px;
+  
   max-width: 408px;
-  max-height: 576px;
+  max-height: 584px;
   background-color: var(--background-white-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -783,7 +798,7 @@ label{
   display: flex;
   justify-content: center;
   margin-bottom: 14px;
-  margin-top: 72px;
+ 
   font-weight: 500;
   color: var(--primary-text-color);
 }
@@ -791,15 +806,16 @@ label{
 .modal-field {
   position: relative;
   margin-bottom: 8px;
-  margin-left: 24px;
-  margin-right: 24px;
+
 }
 .modal-icon {
   position: absolute;
-  top: 50%;
-  left: 16px;
+  top: 48%;
+  left: 13px;
+  bottom: 20px;
   width: 18px;
   height: 24px;
+  
   cursor: pointer;
   fill: #2e2f42;
  
@@ -814,7 +830,7 @@ label{
 .modal-input {
   padding-left: 38px;
   width: 100%;
-  height: 32px;
+  height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
@@ -827,13 +843,17 @@ label{
   position: relative;
   
   margin-bottom: 18px;
-  margin-left: 24px;
-  margin-right: 24px;
+ 
+  
+}
+.modal-form-comment{
+  margin-bottom: 16px;
 }
 
 .modal-comment {
   width: 360px;
   height: 120px;
+  padding: 8px 8px 0px 16px;
   
    
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -844,20 +864,40 @@ label{
   transition-property: color, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  margin-left: 24px;
-  padding-bottom: 16px;
+  
+ 
 }
 
+
 .modal-form-check {
-  
+  display: flex;
+  align-items: center;
   font-size: 12px;
-  line-height: 133.333333%; /* 16/12 */
-  margin-left: 24px;
+  line-height: 1;
   color: #757575;
   letter-spacing: 0.04em;
-  
-  
-  
+}
+.modal-policy {
+  margin-left: 4px;
+  text-decoration: underline;
+  color: var(--logo-blue-color);
+}
+.modal-form-check::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.user-policy:checked + .modal-form-check::before {
+  background-color: var(--accent-color);
+  background-image: url(../images/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-color: var(--accent-color);
 }
 .modal-policy {
   text-decoration: underline;
@@ -905,15 +945,7 @@ label{
   color: transparent;
 }
 
-.modal-label-comment{
-  margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 133.333333%; /* 16/12 */
-  color: var(--grey-color);
-  letter-spacing: 0.04em;
- 
-  margin-left: 24px;
-}
+
 
 /* Subscribe footer */
 .subscribe-box {
