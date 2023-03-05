@@ -772,8 +772,8 @@ label{
   display: flex;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: 250ms;
-  transition-property: background-color fill;
+ 
+  transition-property: background-color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -949,7 +949,7 @@ label{
 
 /* Subscribe footer */
 .subscribe-box {
-  padding-left: 80px;
+  margin-left: 80px;
 }
 .subscribe-text {
   font-weight: 500;
